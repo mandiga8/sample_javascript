@@ -15,17 +15,18 @@ function GetInfo() {
 // console.log(stText.repeat(10) + " Hello!");
 
 
+function StudentsProcess(){
+    let aStudents = [
+        ["Sudent 1", 10],
+        ["Sudent 2", 15],
+        ["Sudent 3", 10]
+    ];
 
+    //console.log(aStudents.reduce((pMax, aStudent) => (pMax<aStudent[1]?aStudent[1]:pMax), 0));
 
+    //let aValues = [10, 20, 30, 40, 50];
+    let aValues = aStudents.map(oStudent => oStudent[1]);
+    console.log("Average of All Students marks: " + Math.ceil(aValues.reduce((nSum, n) => nSum +n, 0) / aStudents.length));
+}
 
-let aStudents = [
-    ["Sudent 1", 10],
-    ["Sudent 2", 10],
-    ["Sudent 3", 10]
-];
-
-//console.log(aStudents.reduce((pMax, aStudent) => (pMax<aStudent[1]?aStudent[1]:pMax), 0));
-
-//let aValues = [10, 20, 30, 40, 50];
-let aValues = aStudents.map(oStudent => oStudent[1]);
-console.log(aValues.reduce((nSum, n) => nSum +n, 0));
+StudentsProcess();
